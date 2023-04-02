@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Not a rick roll</title>
+		<title>url-redirect</title>
 		<style>
 			.hidden {
 				display: none;
@@ -9,22 +9,24 @@
 		</style>
 	</head>
 	<body>
-		<button onclick="gO()" class="hidden" id="s0">Click Me To Load Site</button>
+		<p>this is just a site to see how many people click on this link, and what the destination url is.</p>
+		<p>You can safely click on this link to finish the redirect to the original url</p><br>
+		<a onclick="gO()" class="hidden" id="s0">Click to go to destination url</a>
 		<span class="hidden" id="s1">
-			Lol, you thought this was a rick roll, but you still clicked on the
+			Lol, this could have been a rick roll, but you still clicked on the
 			button. Why?<br>
 			Anyway, you should probably close this tab soon.<br>
-            Im not going to elaborate further....<br>
-            Im just not going to.<br>
-            Fine, I will tell you....... Sike NOPE im not going to. HAHAHAHA<br>
-            I know what you want from me! AN IM NOT GOING TO GIVE IT TO YOU. YOU CAN'T TRICK ME!!!<br><br><br>
+            		Im not going to elaborate further....<br>
+            		Im just not going to.<br>
+            		Fine, I will tell you....... Sike NOPE im not going to. HAHAHAHA<br>
+            		I know what you want from me! AN IM NOT GOING TO GIVE IT TO YOU. YOU CAN'T TRICK ME!!!<br><br><br>
 			Oh, and by the way, something is going to play 3 seconds after
 			the page has loaded
 		</span>
 		<div id="player" class="hidden"></div>
 
 		<script>
-            var plEvent;
+            		var plEvent;
 
 			var button = document.getElementById("s0").classList;
 			var s1 = document.getElementById("s1").classList;
@@ -56,21 +58,21 @@
 				plEvent = event;
 			}
 
-            function gO() {
-                event = plEvent;
-                console.log(event);
-                button.toggle("hidden");
-                s1.toggle("hidden");
+            		function gO() {
+                		event = plEvent;
+                		console.log(event);
+                		button.toggle("hidden");
+                		s1.toggle("hidden");
 				
 				setTimeout(() => {
-                    var s4 = document.getElementById("player").classList;
+                    			var s4 = document.getElementById("player").classList;
 					event.target.playVideo();
 
-                    setTimeout(() => {
-                        s4.toggle("hidden");
-                    }, 1000);
+                    			setTimeout(() => {
+                        			s4.toggle("hidden");
+                    			}, 1000);
 				}, 3000);
-            }
+            		}
 		</script>
 	</body>
 </html>
